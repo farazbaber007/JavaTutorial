@@ -44,3 +44,5 @@ console.log(weight);
 // Name1 = "what is this?"
 
 
+
+/* comment multiple lines  */
