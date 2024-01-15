@@ -1,3 +1,9 @@
+
+/*  Comments 
+        Alt + Shift + A   (paragraph comments)
+        Ctrl+ /  (line comment)
+*/
+
 // https://medium.com/@andrei_diaconu/javascript-for-loop-exercises-4c6cbf570411
 
 var num = 18 ;
@@ -106,3 +112,139 @@ var thisIsArray = ["element1", "element2", "element3", "element4"];
         
 
 
+
+
+
+/* Alt + Shift + A
+https://www.freecodecamp.org/news/javascript-for-loops/
+How to Display Text Multiple Times
+Let’s start by displaying some text several times until our condition is met. 
+*/
+document.write(" <br> codeCamp " +"<br> <br>");
+for( var i = 0; i < 3; i++){
+    var Name1 = "Faraz";
+    document.write("<br> Hi, My Name is "+ Name1);
+}
+
+
+/* How to Display a Sequence of Numbers with a For Loop
+This time around, let’s display a sequence of numbers by displaying the iteration value.
+ */
+for (let i = 2; i <= 5; i++) {
+    console.log(i);  // printing the value of i
+    document.write(i);
+}
+
+
+/* How to Display a Sequence of Even Numbers
+Let’s now display a sequence of even numbers only by displaying the iteration value:
+ */
+for (let i = 2; i <= 10; i+=2) {
+    console.log(i);  // printing the value of i
+    document.write(i);
+}
+
+for (let i = 1; i <= 10; i+=2) {
+    console.log(i);  // printing the value of i
+}
+
+/* How to Break a For Loop Operation
+So far, we have seen how to create a for loop, but it’s also important to mention that we can break out of a loop using break. The break statement is used to terminate the loop immediately when it is encountered.
+
+ */
+
+for (let i = 1; i <= 10; i++) {    
+    if (i == 5) {
+        break;
+    }
+    console.log(i);
+    document.write(i);
+}
+
+/* How to Display the Sum of Natural Numbers
+Let’s now loop from 1-10 and then add these numbers together as the iteration is increased: */
+
+var sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+    sum += i;  // This is same as: sum = sum + i
+}
+
+console.log('<br> The sum of 1 to 10 is: ', sum); // "The sum of 1 to 10 is:  55"
+document.write('<br> The sum of 1 to 10 is: ', sum); // "The sum of 1 to 10 is:  55"
+/* Note: We are adding console.log(…) outside the loop, so it only gives us the final output when the loop is terminated.
+
+We can also decide to use variables to set the max number of our condition this way:
+ */
+var sum1 = 0;
+var n = 10;
+
+for (let i = 1; i <= n; i++) {
+    sum1 += i;  // this is same as: sum = sum + i
+}
+
+console.log('The sum of 1 to 10 is: ', sum1); // "The sum of 1 to 10 is:  55"
+document.write('The sum of 1 to 10 is: ', sum1); // "The sum of 1 to 10 is:  55"
+
+
+/* How to Perform Infinite Loops with a For Loop
+This can hang your system, because it continues to run until the memory is full, since the condition always evaluates as true.
+ */
+/* for(let i = 1; i > 0; i++) {
+    break;
+    console.log(i);
+    // block of code  
+        
+}*/
+
+/* How to Loop Through an Array to Check for Odd and Even Numbers
+Most times you will be working with arrays, so let’s see how we can loop through an array of numbers to output all odd and even numbers:
+ */
+var numbers = [1, 4, 44, 64, 55, 24, 32, 55, 19, 17, 74, 22, 23];
+var evenNumbers = [];
+var oddNumbers = [];
+
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 != 1) {
+        evenNumbers.push(numbers[i]);
+    } else {
+        oddNumbers.push(numbers[i]);
+    }
+}
+
+console.log("The even numbers are: " + evenNumbers); // "The even numbers are: 4,44,64,24,32,74,22"
+console.log("The odd numbers are: " + oddNumbers); // "The odd numbers are: 1,55,55,19,17,23"
+
+document.write("The even numbers are: " + evenNumbers); // "The even numbers are: 4,44,64,24,32,74,22"
+document.write("The odd numbers are: " + oddNumbers); // "The odd numbers are: 1,55,55,19,17,23"
+
+
+/* How to Loop Through an Array of Numbers to Get the Maximum and Minimum Number
+Finally, before we round up this article, let’s see how to get the maximum and minimum number from an array with for loop:
+
+Maximum:
+ */
+var numbers = [1, 4, 44, 64, 55, 24, 32, 55, 19, 17, 74, 22, 23];
+var max = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+    }
+}
+
+console.log(max); // 74
+
+
+/* Minimum: */
+
+var numbers = [4, 44, 64, 55, 24, 32, 55, 19, 17, 74, 22, 23];
+var min = numbers[0];
+
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+        min = numbers[i];
+    }
+}
+
+console.log(min); // 4
